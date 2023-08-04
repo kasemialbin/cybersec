@@ -1,0 +1,59 @@
+import math
+
+# Funzione per calcolare il perimetro di un quadrato
+def perimetro_quadrato(lato):
+    return lato * 4
+
+# Funzione per calcolare il perimetro di un cerchio
+def perimetro_cerchio(raggio):
+    return 2 * math.pi * raggio
+
+# Funzione per calcolare il perimetro di un rettangolo
+def perimetro_rettangolo(base, altezza):
+    return 2 * (base + altezza)
+
+# Main
+while True:
+    # Mostra le opzioni all'utente
+    print("Scegli una figura geometrica:\n")
+    print("1. Quadrato")
+    print("2. Cerchio")
+    print("3. Rettangolo")
+    print("4. Esci\n")
+
+    # Legge la scelta dell'utente
+    scelta = int(input("\nInserisci il numero corrispondente: "))
+
+    # Calcola il perimetro della figura scelta in base alla scelta dell'utente
+
+  
+    if scelta == 1:
+        lato = float(input("\nInserisci la lunghezza del lato del quadrato: "))
+        perimetro = perimetro_quadrato(lato)
+        print("\nIl perimetro del quadrato è:", perimetro)
+        print("\n")
+    
+      
+    elif scelta == 2:
+
+      
+        raggio = float(input("\nInserisci la lunghezza del raggio del cerchio: "))
+        perimetro = perimetro_cerchio(raggio)
+        print("\nIl perimetro del cerchio è:", perimetro)
+        print("\n")
+    elif scelta == 3:
+
+      
+        base = float(input("\nInserisci la lunghezza della base del rettangolo: "))
+        altezza = float(input("\nInserisci la lunghezza dell'altezza del rettangolo: "))
+        perimetro = perimetro_rettangolo(base, altezza)
+        print("\nIl perimetro del rettangolo è:", perimetro)
+        print("\n")
+
+      
+    elif scelta == 4:
+        break
+      
+    else:
+        print("Scelta non valida. Riprova.")
+        break
